@@ -1,0 +1,9 @@
+CREATE TABLE db_products(
+	id SERIAL PRIMARY KEY,
+	name_products VARCHAR(30) UNIQUE NOT NULL,
+	category VARCHAR(10) NOT NULL,
+	price MONEY NOT NULL,
+	date_birth DATE NOT NULL,
+	data_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
