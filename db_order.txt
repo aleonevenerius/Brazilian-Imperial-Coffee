@@ -1,0 +1,11 @@
+CREATE TABLE db_order(
+	code_order SERIAL PRIMARY KEY,
+	client_name VARCHAR(50) NOT NULL,
+	client_order INT REFERENCES db_products(id),
+	date_order TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+SELECT * FROM db_order
+
+INSERT INTO db_order(client_name, client_order)
+VALUES('Alexandre Leone Venerius de Moreria',16)
