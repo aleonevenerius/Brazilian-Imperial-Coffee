@@ -23,3 +23,19 @@ VALUES
 ('Coffee Baron of Brazil', 'Coffee', 19.00, '1880-01-01');
 
 SELECT * FROM db_products;
+UPDATE db_products SET price = 'R$ 15,99' WHERE id = 1;
+
+
+ALTER TABLE db_products
+ADD COLUMN currency VARCHAR(5) NOT NULL DEFAULT 'BRL';
+
+SELECT * FROM db_products;
+
+INSERT INTO db_products(name_products, category, price, date_birth)
+VALUES('Marvelous Black Coffee', 'Coffee', '0,50', '1889/01/01')
+
+SELECT * FROM db_products;
+
+ALTER TABLE db_products
+DROP COLUMN currency;
+

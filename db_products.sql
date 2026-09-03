@@ -1,1 +1,1 @@
-SELECT * FROM db_products;
+DROP COLUMN  db_products;
