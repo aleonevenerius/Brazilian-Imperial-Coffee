@@ -11,6 +11,8 @@ Its main purpose is to practise my SQL skills.
 
 * [PostgreSQL](https://www.postgresql.org/)
 * [dbdiagram.io](https://dbdiagram.io/home)
+* [Psycopg](https://www.psycopg.org/docs/usage.html)
+* [ChatGPT](https://chatgpt.com/)
 
 ## 🚀 The Changelog
 ### Wednesday, September 2, 2026:
