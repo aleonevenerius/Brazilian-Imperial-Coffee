@@ -4,3 +4,6 @@ connecting = psycopg2.connect(database = "cafe_db", host = "localhost", user = "
    
 print(connecting.info)
 print(connecting.status)
+cursor = connecting.cursor()
+cursor.execute('SELECT * FROM db_order')
+print(cursor.fetchall())
