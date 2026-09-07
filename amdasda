@@ -1,0 +1,22 @@
+[33m5148c86[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{0}: commit: Refactoring
+[33mf8251b5[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: commit: It capables to add data to db_cafe
+[33mb722ad1[m HEAD@{2}: commit: Ref
+[33m2ee5943[m HEAD@{3}: commit: New files and function
+[33m7e6f550[m HEAD@{4}: commit: New column addded to table 'db_order'
+[33m978f441[m HEAD@{5}: commit: New functions
+[33mb4bfcce[m HEAD@{6}: commit: Order script created
+[33m9b0fd4b[m HEAD@{7}: pull: Merge made by the 'ort' strategy.
+[33m6f0bcbd[m HEAD@{8}: commit: New images added
+[33m7373806[m HEAD@{9}: commit: It shows data base's orders
+[33mb0183f1[m HEAD@{10}: commit: New folder to Python scripts
+[33mf085bc4[m HEAD@{11}: pull: Merge made by the 'ort' strategy.
+[33m6bd764b[m HEAD@{12}: commit: First Python script to connect cafe_db
+[33m15a430e[m HEAD@{13}: commit: Diagram added
+[33mf0cf988[m HEAD@{14}: commit: There is a pgerd file. Very well!
+[33mc307963[m HEAD@{15}: commit: Hereafter, there is a data base's backup
+[33m2afaced[m HEAD@{16}: commit: First order
+[33m51e8548[m HEAD@{17}: commit: New lines
+[33mfd754ee[m HEAD@{18}: commit: Backup on TXT file
+[33mcdbd6f2[m HEAD@{19}: commit: Products table created
+[33m6033032[m HEAD@{20}: pull: Fast-forward
+[33m4bb68cd[m HEAD@{21}: commit (initial): Commit i
