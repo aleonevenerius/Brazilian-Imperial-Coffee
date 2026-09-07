@@ -1,3 +1,6 @@
+
+Welcome!
+
 #########################
 #			#
 #   Brazilian Imperial	#
@@ -10,11 +13,3 @@
 #     \____/		#
 #			#
 #########################
-
-Welcome! Where shall we start?
-
-1. Create an order;
-2. Consult an order;
-3. Consult a product;
-4. Register a new product;
-5. Exit.

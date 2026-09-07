@@ -1,6 +1,7 @@
 # Importing libraries
 import psycopg2
 from Functions import *
+import Functions
 
 # The password to acess the PostgreSQL
 password = input("Password: ")
@@ -16,5 +17,6 @@ except:
 
 else:
     cursor = connecting.cursor()
-    ToInitialHome()
-    ToCreateOrder()
+    ToLogo()
+    ToOptions()
+    ToChoose()

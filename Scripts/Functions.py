@@ -1,10 +1,14 @@
 import psycopg2
-    
 #                           The main function of the system
 # To create the system's initail home
-def ToInitialHome():
-    h = open("C:\\DB\\Cafe\\Scripts\\HomeInitial.txt")
+def ToLogo():
+    h = open("C:\\DB\\Cafe\\Scripts\\Logo.txt")
     print(h.read())
+    
+# To create the system's home options
+def ToOptions():
+    o =  open("C:\\DB\\Cafe\\Scripts\\Options.txt")
+    print(o.read())
 
 # To consult orders
 def ToConsultOrder():
@@ -36,3 +40,21 @@ def ToCreateOrder():
             ('Making', client_name, order))
             connecting.commit()
             ToShowOrder()
+            
+# The next choose afterwards the "Initial home"
+def ToChoose():
+    labour = True
+    while labour:
+        choose = int(input("Which shall we select?\n> "))
+        match choose:
+            case 1:
+                print("Creating a new order...")
+            case 2:
+                print("Consulting")
+            case 3:
+                print("Consult product")
+            case 4:
+                print("Registering")
+            case 5:
+                labour = False
+                print("Out...")
