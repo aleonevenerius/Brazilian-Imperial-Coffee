@@ -1,41 +1,20 @@
+# Importing libraries
 import psycopg2
-p = input("Password: ")
+from Functions import *
 
-connecting = psycopg2.connect(database = "cafe_db", host = "localhost", user = "postgres", password = p, port = "5432")
-cursor = connecting.cursor()
+# The password to acess the PostgreSQL
+password = input("Password: ")
+# The main variable which will control the main loop
+labour = True
 
-def ToHome():
-    h = open("C:\\DB\\Cafe\\Scripts\\Home.txt")
-    print(h.read())
-
-ToHome()
-
+# The First Steps
 try:
-    # Variables about client and order
-    order = int(input("What is your order?: "))
-    client_name = input("What is your name?:")
+    connecting = psycopg2.connect(database = "cafe_db", host = "localhost", user = "postgres", password = password, port = "5432")
 
-except ValueError:
-    print("There is not that order.")
+except:
+    print("That isn't the password.")
 
 else:
-    pass
-
-# The main function of the system
-def ToShowOrder():
-    cursor.execute('SELECT * FROM db_order')
-    print(cursor.fetchall())
-def ToShowCafeProducts():
-    cursor.execute('SELECT * FROM db_products')
-    print(cursor.fetchall())
-def ToCreateOrder():
-    cursor.execute(
-    """
-    INSERT INTO db_order(order_circumstance, client_name, client_order)
-    VALUES(%s, %s, %s)
-    """,
-    ('Making', client_name, order))
-    connecting.commit()
-    ToShowOrder()
-
-ToCreateOrder()
+    cursor = connecting.cursor()
+    ToInitialHome()
+    ToCreateOrder()
