@@ -1,27 +1,16 @@
-import psycopg2
 #                           The main function of the system
-# To create the system's initail home
+# It creates the system's logo
 def ToLogo():
     h = open("C:\\DB\\Cafe\\Scripts\\Logo.txt")
     print(h.read())
     
-# To create the system's home options
+# It creates the system's home options
 def ToOptions():
     o =  open("C:\\DB\\Cafe\\Scripts\\Options.txt")
     print(o.read())
 
-# To consult orders
-def ToConsultOrder():
-    cursor.execute('SELECT * FROM db_order')
-    print(cursor.fetchall())
-    
-# To consult products
-def ToConsultProducts():
-    cursor.execute('SELECT * FROM db_products')
-    print(cursor.fetchall())
-
-# To create order
-def ToCreateOrder():
+# It create order
+def ToCreateOrder(cursor, connecting):
     working = True
     while working:
         try:
@@ -39,22 +28,51 @@ def ToCreateOrder():
             """,
             ('Making', client_name, order))
             connecting.commit()
-            ToShowOrder()
-            
+            working = False
+
+# It changes the cirumstances of order
+def ToShiftCircumstances():
+    print("Changing")
+
+# It consults the orders
+def ToConsultOrder(cursor):
+    cursor.execute('SELECT * FROM db_order')
+    print(cursor.fetchall())
+    
+# It checks the products
+def ToConsultProducts(cursor):
+    cursor.execute('SELECT * FROM db_products')
+    print(cursor.fetchall())
+
+# It registers a product
+def ToRegisterProduct():
+    print("Registering\n")
+
 # The next choose afterwards the "Initial home"
-def ToChoose():
+def ToChoose(cursor, connecting):
     labour = True
     while labour:
-        choose = int(input("Which shall we select?\n> "))
-        match choose:
-            case 1:
-                print("Creating a new order...")
-            case 2:
-                print("Consulting")
-            case 3:
-                print("Consult product")
-            case 4:
-                print("Registering")
-            case 5:
-                labour = False
-                print("Out...")
+        try:
+            choose = int(input("Which shall we select?\n> "))
+        except ValueError:
+            print("Incorrect value! Please, try again.")
+        else:
+            match choose:
+                case 1:
+                    ToCreateOrder(cursor, connecting)
+                    ToOptions()
+                case 2:
+                    ToShiftCircumstances()
+                    ToOptions()
+                case 3:
+                    ToConsultOrder(cursor)
+                    ToOptions()
+                case 4:
+                    ToConsultProducts(cursor)
+                    ToOptions()
+                case 5:
+                    ToRegisterProduct()
+                    ToOptions()
+                case 6:
+                    labour = False
+                    print("Turning off.")

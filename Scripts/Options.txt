@@ -1,5 +1,9 @@
+
+What should we do?
+
 1. Create a new order;
-2. Consult an order;
-3. Consult a product;
-4. Register a new product;
-5. Exit.
+2. Shift the order's circumstances;
+3. Consult an order;
+4. Consult a product;
+5. Register a new product;
+6. Exit.

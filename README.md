@@ -21,4 +21,4 @@ Its main purpose is to practise my SQL skills.
 ![ReferenceAndTables](https://github.com/aleonevenerius/Coffee-Imperial-Brazil/blob/master/Images/Diagram.png)
 
 ### Monday, September 7, 2026:
-* Scripts' structure is done.
+* The scripts' structure is complete.
