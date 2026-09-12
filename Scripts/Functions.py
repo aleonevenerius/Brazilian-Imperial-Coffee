@@ -46,8 +46,15 @@ def ToConsultProducts(cursor):
 
 # It registers a product
 def ToRegisterProduct():
-    print("Registering\n")
-
+    labour = True
+    while labour:
+        try:
+            name_product = input("What is the name of the new product?: ")
+            category_product = input("What is the product's category? Coffee, Cake, Candy, Drink?\n> ")        
+            price_product = float("What is the price of its?: ")
+        except ValueError:
+            print("This value isn't aceptble")
+            
 # The next choose afterwards the "Initial home"
 def ToChoose(cursor, connecting):
     labour = True
