@@ -74,5 +74,7 @@ def ToChoose(cursor, connecting):
                     ToRegisterProduct()
                     ToOptions()
                 case 6:
+                    print("Deleting...")
+                case 7:
                     labour = False
                     print("Turning off.")
