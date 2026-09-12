@@ -45,16 +45,25 @@ def ToConsultProducts(cursor):
     print(cursor.fetchall())
 
 # It registers a product
-def ToRegisterProduct():
+def ToRegisterProduct(cursor, connecting):
     labour = True
     while labour:
+        name_product = input("What is the name of the new product?: ")
+        category_product = input("What is the product's category? Coffee, Cake, Candy, Drink?\n> ")        
         try:
-            name_product = input("What is the name of the new product?: ")
-            category_product = input("What is the product's category? Coffee, Cake, Candy, Drink?\n> ")        
-            price_product = float("What is the price of its?: ")
+            price_product = float(input("What is the price of its?: "))
         except ValueError:
-            print("This value isn't aceptble")
-            
+            print("This value isn't acceptable.")
+        else:
+            cursor.execute(
+            """
+            INSERT INTO db_products(name_products, category, price)
+            VALUES(%s, %s, %s)
+            """, (name_product, category_product, price_product))
+            connecting.commit()
+            print("It was created properly!")
+            labour = False
+        
 # The next choose afterwards the "Initial home"
 def ToChoose(cursor, connecting):
     labour = True
@@ -78,7 +87,7 @@ def ToChoose(cursor, connecting):
                     ToConsultProducts(cursor)
                     ToOptions()
                 case 5:
-                    ToRegisterProduct()
+                    ToRegisterProduct(cursor, connecting)
                     ToOptions()
                 case 6:
                     print("Deleting...")
