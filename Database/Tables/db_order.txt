@@ -5,3 +5,7 @@ CREATE TABLE db_order(
 	client_order INT REFERENCES db_products(id),
 	date_order TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+ALTER TABLE db_order
+ALTER COLUMN client_order TYPE SMALLINT
+USING client_order::SMALLINT;
