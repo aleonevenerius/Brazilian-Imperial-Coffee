@@ -63,7 +63,25 @@ def ToRegisterProduct(cursor, connecting):
             connecting.commit()
             print("It was created properly!")
             labour = False
-        
+
+def ToDeleteOrder(cursor, connecting):
+    labour = True
+    while labour:
+        try:
+            code_order_client = int(input("Code order: "))
+        except ValueError:
+            print("Incorrect value. Try again, please.")
+        else:
+            code_order_client = str(code_order_client)
+            cursor.execute(
+            """
+            DELETE FROM db_order
+            WHERE code_order = %s;
+            """, (code_order_client))
+            connecting.commit()
+            print("Done!")
+            labour = False
+            
 # The next choose afterwards the "Initial home"
 def ToChoose(cursor, connecting):
     labour = True
@@ -90,7 +108,7 @@ def ToChoose(cursor, connecting):
                     ToRegisterProduct(cursor, connecting)
                     ToOptions()
                 case 6:
-                    print("Deleting...")
+                    ToDeleteOrder(cursor, connecting)
                 case 7:
                     labour = False
                     print("Turning off.")

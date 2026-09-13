@@ -39,3 +39,8 @@ SELECT * FROM db_products;
 ALTER TABLE db_products
 DROP COLUMN currency;
 
+ALTER TABLE db_products
+DROP COLUMN birth_birth;
+
+INSERT INTO db_products(name_products, category, price)
+VALUES('A Piece of Brazillian Crown', 'Cake', '10.99');
