@@ -31,8 +31,24 @@ def ToCreateOrder(cursor, connecting):
             working = False
 
 # It changes the cirumstances of order
-def ToShiftCircumstances():
-    print("Changing")
+def ToShiftCircumstances(cursor, connecting):
+    labour = True
+    while labour:
+        try:
+            client_order_code = int(input('Order code: '))
+        except ValueError:
+            print("Incorrect value. Please, try again.")
+        else:
+            client_order_code = str(client_order_code)
+            cursor.execute(
+            """
+            UPDATE db_order
+            SET order_circumstance = 'Done'
+            WHERE code_order = %s
+            """, (client_order_code,))
+            connecting.commit()
+            print("Done!")
+            labour = False
 
 # It consults the orders
 def ToConsultOrder(cursor):
@@ -68,7 +84,7 @@ def ToDeleteOrder(cursor, connecting):
     labour = True
     while labour:
         try:
-            code_order_client = int(input("Code order: "))
+            code_order_client = int(input("Order code: "))
         except ValueError:
             print("Incorrect value. Try again, please.")
         else:
@@ -96,7 +112,7 @@ def ToChoose(cursor, connecting):
                     ToCreateOrder(cursor, connecting)
                     ToOptions()
                 case 2:
-                    ToShiftCircumstances()
+                    ToShiftCircumstances(cursor, connecting)
                     ToOptions()
                 case 3:
                     ToConsultOrder(cursor)
