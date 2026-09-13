@@ -2,7 +2,7 @@
 What should we do?
 
 1. Create a new order;
-2. Shift the order's circumstances;
+2. Change the circumstances of an order;
 3. Consult an order;
 4. Consult a product;
 5. Register a new product;

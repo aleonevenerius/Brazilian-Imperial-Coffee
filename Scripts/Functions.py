@@ -31,7 +31,7 @@ def ToCreateOrder(cursor, connecting):
             working = False
 
 # It changes the cirumstances of order
-def ToShiftCircumstances(cursor, connecting):
+def ToChangeCircumstances(cursor, connecting):
     labour = True
     while labour:
         try:
@@ -112,7 +112,7 @@ def ToChoose(cursor, connecting):
                     ToCreateOrder(cursor, connecting)
                     ToOptions()
                 case 2:
-                    ToShiftCircumstances(cursor, connecting)
+                    ToChangeCircumstances(cursor, connecting)
                     ToOptions()
                 case 3:
                     ToConsultOrder(cursor)
