@@ -9,6 +9,17 @@ def ToOptions():
     o =  open("C:\\DB\\Cafe\\Scripts\\Options.txt")
     print(o.read())
 
+def ToTime():
+    icons = ["|", "/", "-", "\\", "|"]
+    i = 0
+    while i < 5:
+        print(f"\rLoading {icons[i%len(icons)]}", end="", flush=True)
+        i += 1
+        time.sleep(0.1)
+
+    time.sleep(1)
+    print("\nDone!")
+
 # It create order
 def ToCreateOrder(cursor, connecting):
     working = True
