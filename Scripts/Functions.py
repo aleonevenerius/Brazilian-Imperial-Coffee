@@ -70,16 +70,16 @@ def ToConsultOrder(cursor):
 # It checks the products
 def ToConsultProducts(cursor, connecting):
     while True:
-        #try:
+        try:
             category_product = input("What is the category of product?\n> ")
-            cursor.execute('SELECT * FROM db_products WHERE category = '+ category_product)
-'''
+            cursor.execute("SELECT * FROM db_products WHERE category = '"+category_product+"'")
+
         except:
             print("Incorrect value. Please, try again.")
         else:
             print(cursor.fetchall())
             break
-'''
+
 # It registers a product
 def ToRegisterProduct(cursor, connecting):
     labour = True

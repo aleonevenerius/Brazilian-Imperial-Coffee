@@ -1,0 +1,237 @@
+[33mcommit 444802dfa99fde6117fadfcbac1a65edb0e79c32[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sat Sep 19 17:02:31 2026 -0300
+
+    Improving 'ToConsultOrder' function and others as well
+
+[33mcommit 05549b140fcc45a65726aeacec8c42e74f5b38f1[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Tue Sep 15 21:01:05 2026 -0300
+
+    New function called 'To time'
+
+[33mcommit 4bc31ca832dec90e64a631df1bb3de6bf065d60c[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 13 18:28:06 2026 -0300
+
+    Backup database
+
+[33mcommit 76592e12c70e4b2ca58823fcaf34a896edc63912[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 13 18:10:13 2026 -0300
+
+    INTEGER -> SMALLINT
+
+[33mcommit 02bfe9366c1b94410f166cf66f0efd895e115ffb[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 13 16:01:47 2026 -0300
+
+    The swift circumstances function is done!
+
+[33mcommit 81938bd80ab6ff5a505960fa2dbd187a3bb2340f[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 13 15:30:19 2026 -0300
+
+    The delete order function is done!
+
+[33mcommit 7b5906e7f4a52ce8609dbd2797f99576bc8f4b56[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sat Sep 12 19:00:14 2026 -0300
+
+    The function 'Register new product finished
+
+[33mcommit 3f23bd371e0f5903615267e92341c10678490e35[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sat Sep 12 18:37:42 2026 -0300
+
+    Column date_birth removed
+
+[33mcommit 1fbe8842877f297a512cd94b7df1857055462d2e[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sat Sep 12 18:08:31 2026 -0300
+
+    New function added to 'Options.txt' file
+
+[33mcommit c59b2fc78414c9c263d69887d0f6950bbcd720ab[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Mon Sep 7 20:37:13 2026 -0300
+
+    Everythig is working nowgit add .git add .git add .
+
+[33mcommit 58c53fa3fcf8d740f2789cc68fc9577f4014de31[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Mon Sep 7 16:40:13 2026 -0300
+
+    New folder was created
+
+[33mcommit 5a2eba80b2f1bfc18425863ac072a9e5471baa81[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Mon Sep 7 16:37:39 2026 -0300
+
+    Added new a changelog on README file
+
+[33mcommit a2ac6fb1993228b01c3199e120a41504d4f78566[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Mon Sep 7 16:32:42 2026 -0300
+
+    We have a structure!
+
+[33mcommit 5148c866b1c6939ad0f41be92fccff4dcc3572ec[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Mon Sep 7 15:54:07 2026 -0300
+
+    Refactoring
+
+[33mcommit f8251b50cf71329796e0f6ed601d394dd79fbb24[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 6 19:37:06 2026 -0300
+
+    It capables to add data to db_cafe
+
+[33mcommit b722ad11ce3c57419a9689cf750e7f728a4704ee[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 6 19:15:25 2026 -0300
+
+    Ref
+
+[33mcommit 2ee5943c46e0e28f2f7a057addad37dfbb7c2b8a[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 6 17:16:32 2026 -0300
+
+    New files and function
+
+[33mcommit 7e6f5503e71044e28098e0141d4deeaea2fd190a[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 6 16:30:08 2026 -0300
+
+    New column addded to table 'db_order'
+
+[33mcommit 978f441c6ab53a54b9f8461a5897418682a0021d[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 6 16:14:06 2026 -0300
+
+    New functions
+
+[33mcommit b4bfcce419e1423b32cbdf38afe2c18fddd7b1a8[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Sun Sep 6 16:07:03 2026 -0300
+
+    Order script created
+
+[33mcommit 9b0fd4bd6ff47b4f121f5e1ada6fad872af20984[m
+Merge: 6f0bcbd cdfe241
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Thu Sep 3 15:57:08 2026 -0300
+
+    Merge branch 'master' of https://github.com/aleonevenerius/Coffee-Imperial-Brazil
+
+[33mcommit 6f0bcbd956588114a7fa03ed76290fbd85029614[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Thu Sep 3 15:56:24 2026 -0300
+
+    New images added
+
+[33mcommit cdfe241a7cdf9ebe5369eb659ecbcfa2e66d78ac[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Thu Sep 3 15:53:57 2026 -0300
+
+    Add ChatGPT link to README
+
+[33mcommit 6f377d218d3f2107f1f74a1ab222e6f4b0c3a39e[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Thu Sep 3 15:47:11 2026 -0300
+
+    Add Psycopg to software and tools list
+
+[33mcommit 73738066e4cb2da0137157f81416ae5e7936e25f[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Thu Sep 3 15:46:31 2026 -0300
+
+    It shows data base's orders
+
+[33mcommit b0183f1e5be7061b24db9447119ea1ea11bcf007[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Thu Sep 3 15:31:53 2026 -0300
+
+    New folder to Python scripts
+
+[33mcommit f085bc42c4d1aa332423701d8b3609ef513dc0b6[m
+Merge: 6bd764b cde28ac
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Thu Sep 3 15:30:34 2026 -0300
+
+    Merge branch 'master' of https://github.com/aleonevenerius/Coffee-Imperial-Brazil
+
+[33mcommit 6bd764bc217fa91ea40c703ee47c7875d3b56ab4[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Thu Sep 3 15:30:28 2026 -0300
+
+    First Python script to connect cafe_db
+
+[33mcommit cde28ac37d3b0a3d84be99562346579ef97576f3[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 23:14:25 2026 -0300
+
+    Revise README for Brazilian Imperial Coffee project
+    
+    Updated project name and expanded README content.
+
+[33mcommit 15a430e40cf831dc10733080fb764aacdb636b87[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 22:55:40 2026 -0300
+
+    Diagram added
+
+[33mcommit f0cf988c0374cccc6443680869e7d5e314c0a1f8[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 22:36:09 2026 -0300
+
+    There is a pgerd file. Very well!
+
+[33mcommit c307963145bdf071f81629181c1fee15d722f693[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 22:28:21 2026 -0300
+
+    Hereafter, there is a data base's backup
+
+[33mcommit 2afaced7374675ecad7a8d134fc91230cbc982d5[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 22:20:14 2026 -0300
+
+    First order
+
+[33mcommit 51e8548b477d5c79d9a4e3fcfe3c76bdffb0b800[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 21:52:20 2026 -0300
+
+    New lines
+
+[33mcommit fd754ee2d52e52131c8c3903db3f88527a9a1436[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 20:55:00 2026 -0300
+
+    Backup on TXT file
+
+[33mcommit cdbd6f2b94579f4d4350094447211c6ccc506db4[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 20:29:11 2026 -0300
+
+    Products table created
+
+[33mcommit 6033032d15f3ad5288d857ba5d26dc0219837ba9[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 20:17:37 2026 -0300
+
+    Add initial README for Café System
+
+[33mcommit ad38f9f02dae64c38b8bd634967974cdb5c32dc9[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Wed Sep 2 20:15:27 2026 -0300
+
+    Delete db_imperial_coffee_brazil_products.sql
+
+[33mcommit 4bb68cd4f75e460e65c6d73c440b72ff7f274fe3[m
+Author: aleonevenerius <alexandreleonevenerius@gmail.com>
+Date:   Tue Sep 1 22:05:26 2026 -0300
+
+    Commit i
