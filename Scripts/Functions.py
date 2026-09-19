@@ -1,3 +1,5 @@
+import time
+
 #                           The main function of the system
 # It creates the system's logo
 def ToLogo():
@@ -17,9 +19,9 @@ def ToTime():
         i += 1
         time.sleep(0.1)
 
-    time.sleep(1)
     print("\nDone!")
-
+    time.sleep(1)
+    
 # It create order
 def ToCreateOrder(cursor, connecting):
     while True:
@@ -39,7 +41,7 @@ def ToCreateOrder(cursor, connecting):
             connecting.commit()
             break
     ToTime()
-
+    
 # It changes the cirumstances of order
 def ToChangeCircumstances(cursor, connecting):
     while True:
@@ -79,7 +81,7 @@ def ToConsultProducts(cursor, connecting):
             print(cursor.fetchall())
             break
     ToTime()
-
+    
 # It registers a product
 def ToRegisterProduct(cursor, connecting):
     while True:
@@ -99,7 +101,7 @@ def ToRegisterProduct(cursor, connecting):
             print("It was created properly!")
             break
     ToTime()
-
+    
 def ToDeleteOrder(cursor, connecting):
     while True:
         try:
@@ -134,7 +136,7 @@ def ToChoose(cursor, connecting):
                     ToChangeCircumstances(cursor, connecting)
                     ToOptions()
                 case 3:
-                    ToConsultOrder(cursor, connecting)
+                    ToConsultOrder(cursor)
                     ToOptions()
                 case 4:
                     ToConsultProducts(cursor, connecting)
