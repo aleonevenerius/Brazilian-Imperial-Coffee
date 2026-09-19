@@ -38,6 +38,7 @@ def ToCreateOrder(cursor, connecting):
             ('Making', client_name, order))
             connecting.commit()
             break
+    ToTime()
 
 # It changes the cirumstances of order
 def ToChangeCircumstances(cursor, connecting):
@@ -57,12 +58,14 @@ def ToChangeCircumstances(cursor, connecting):
             connecting.commit()
             print("Done!")
             break
-            
+    ToTime()
+    
 # It consults the orders
 def ToConsultOrder(cursor):
     number_order = input("What's the number of order?\n> ")
     cursor.execute('SELECT * FROM db_order WHERE code_order = '+ number_order)
     print(cursor.fetchall())
+    ToTime()
     
 # It checks the products
 def ToConsultProducts(cursor, connecting):
@@ -75,13 +78,13 @@ def ToConsultProducts(cursor, connecting):
         else:
             print(cursor.fetchall())
             break
+    ToTime()
 
 # It registers a product
 def ToRegisterProduct(cursor, connecting):
     while True:
         name_product = input("What is the name of the new product?: ")
-        category_product = input("What is the product's category? Coffee, Cake, Candy, Drink?\n> ")        
-        
+        category_product = input("What is the product's category? Coffee, Cake, Candy, Drink?\n> ")                
         try:
             price_product = float(input("What is the price of its?: "))
         except ValueError:
@@ -95,7 +98,8 @@ def ToRegisterProduct(cursor, connecting):
             connecting.commit()
             print("It was created properly!")
             break
-            
+    ToTime()
+
 def ToDeleteOrder(cursor, connecting):
     while True:
         try:
@@ -112,7 +116,8 @@ def ToDeleteOrder(cursor, connecting):
             connecting.commit()
             print("Done!")
             break
-            
+    ToTime()
+
 # The next choose afterwards the "Initial home"
 def ToChoose(cursor, connecting):
     while True:
