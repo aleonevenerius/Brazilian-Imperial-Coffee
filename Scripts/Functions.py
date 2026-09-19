@@ -22,12 +22,10 @@ def ToTime():
 
 # It create order
 def ToCreateOrder(cursor, connecting):
-    working = True
-    while working:
+    while True:
         try:
             # Variables about client and order
             order = int(input("What is your order?: "))
-            
         except ValueError:
             print("The order must be an int number!")
         else:
@@ -39,12 +37,11 @@ def ToCreateOrder(cursor, connecting):
             """,
             ('Making', client_name, order))
             connecting.commit()
-            working = False
+            break
 
 # It changes the cirumstances of order
 def ToChangeCircumstances(cursor, connecting):
-    labour = True
-    while labour:
+    while True:
         try:
             client_order_code = int(input('Order code: '))
         except ValueError:
@@ -59,8 +56,8 @@ def ToChangeCircumstances(cursor, connecting):
             """, (client_order_code,))
             connecting.commit()
             print("Done!")
-            labour = False
-
+            break
+            
 # It consults the orders
 def ToConsultOrder(cursor):
     number_order = input("What's the number of order?\n> ")
@@ -73,7 +70,6 @@ def ToConsultProducts(cursor, connecting):
         try:
             category_product = input("What is the category of product?\n> ")
             cursor.execute("SELECT * FROM db_products WHERE category = '"+category_product+"'")
-
         except:
             print("Incorrect value. Please, try again.")
         else:
@@ -82,10 +78,10 @@ def ToConsultProducts(cursor, connecting):
 
 # It registers a product
 def ToRegisterProduct(cursor, connecting):
-    labour = True
-    while labour:
+    while True:
         name_product = input("What is the name of the new product?: ")
         category_product = input("What is the product's category? Coffee, Cake, Candy, Drink?\n> ")        
+        
         try:
             price_product = float(input("What is the price of its?: "))
         except ValueError:
@@ -98,11 +94,10 @@ def ToRegisterProduct(cursor, connecting):
             """, (name_product, category_product, price_product))
             connecting.commit()
             print("It was created properly!")
-            labour = False
-
+            break
+            
 def ToDeleteOrder(cursor, connecting):
-    labour = True
-    while labour:
+    while True:
         try:
             code_order_client = int(input("Order code: "))
         except ValueError:
@@ -116,12 +111,11 @@ def ToDeleteOrder(cursor, connecting):
             """, (code_order_client))
             connecting.commit()
             print("Done!")
-            labour = False
+            break
             
 # The next choose afterwards the "Initial home"
 def ToChoose(cursor, connecting):
-    labour = True
-    while labour:
+    while True:
         try:
             choose = int(input("Which shall we select?\n> "))
         except ValueError:
@@ -146,5 +140,4 @@ def ToChoose(cursor, connecting):
                 case 6:
                     ToDeleteOrder(cursor, connecting)
                 case 7:
-                    labour = False
-                    print("Turning off.")
+                    break
