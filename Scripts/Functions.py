@@ -63,14 +63,23 @@ def ToChangeCircumstances(cursor, connecting):
 
 # It consults the orders
 def ToConsultOrder(cursor):
-    cursor.execute('SELECT * FROM db_order')
+    number_order = input("What's the number of order?\n> ")
+    cursor.execute('SELECT * FROM db_order WHERE code_order = '+ number_order)
     print(cursor.fetchall())
     
 # It checks the products
-def ToConsultProducts(cursor):
-    cursor.execute('SELECT * FROM db_products')
-    print(cursor.fetchall())
-
+def ToConsultProducts(cursor, connecting):
+    while True:
+        #try:
+            category_product = input("What is the category of product?\n> ")
+            cursor.execute('SELECT * FROM db_products WHERE category = '+ category_product)
+'''
+        except:
+            print("Incorrect value. Please, try again.")
+        else:
+            print(cursor.fetchall())
+            break
+'''
 # It registers a product
 def ToRegisterProduct(cursor, connecting):
     labour = True
@@ -126,10 +135,10 @@ def ToChoose(cursor, connecting):
                     ToChangeCircumstances(cursor, connecting)
                     ToOptions()
                 case 3:
-                    ToConsultOrder(cursor)
+                    ToConsultOrder(cursor, connecting)
                     ToOptions()
                 case 4:
-                    ToConsultProducts(cursor)
+                    ToConsultProducts(cursor, connecting)
                     ToOptions()
                 case 5:
                     ToRegisterProduct(cursor, connecting)
