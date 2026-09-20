@@ -67,11 +67,11 @@ def ToConsultOrder(cursor, connecting):
     def OneOrder(cursor, connecting):
         number_order = input("What's the number of order?\n> ")
         cursor.execute('SELECT * FROM db_order WHERE code_order = '+ number_order)
-        order = cursor.fetchall())
+        order = cursor.fetchall()
         if order == []:
             print("There is no that order.")
         else:
-            print(order[3])
+            print(order[0][0:4])
             ToTime()
         
     def AllOrders(cursor, connecting):
@@ -85,21 +85,21 @@ def ToConsultOrder(cursor, connecting):
             else:
                 print(all_orders[i])
                 i += 1
-            break
      
     while True:
         try:
-            type_order = int(input("What do you wish?\n1 - Consult solely one order\n2 - Consult all orders"))
+            type_order = int(input("What do you wish?\n1 - Consult solely one order\n2 - Consult all orders\n3 - Exit\n> "))
         except ValueError:
             print("There is no this option. Please, try again.")
         else:
             if 1 == type_order:
                 OneOrder(cursor, connecting)
             elif 2 == type_order:
-                AllOrders()
+                AllOrders(cursor, connecting)
+            elif 3 == type_order:
+                break
             else:
                 print("There is no this option. Please, try again.")
-                break
 
 # It checks the products
 def ToConsultProducts(cursor, connecting):
@@ -181,7 +181,7 @@ def ToChoose(cursor, connecting):
                     ToChangeCircumstances(cursor, connecting)
                     ToOptions()
                 case 3:
-                    ToConsultOrder(cursor)
+                    ToConsultOrder(cursor, connecting)
                     ToOptions()
                 case 4:
                     ToConsultProducts(cursor, connecting)
