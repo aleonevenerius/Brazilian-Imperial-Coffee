@@ -72,11 +72,21 @@ def ToConsultOrder(cursor, connecting):
             print("There is no that order.")
         else:
             print(order[3])
-        ToTime()
+            ToTime()
         
-    def AllOrders():
-        
-        
+    def AllOrders(cursor, connecting):
+        cursor.execute("SELECT * FROM db_order")
+        all_orders = cursor.fetchall()
+        size = len(all_orders)
+        i = 0
+        while True:
+            if i == (size-1):
+                break
+            else:
+                print(all_orders[i])
+                i += 1
+            break
+     
     while True:
         try:
             type_order = int(input("What do you wish?\n1 - Consult solely one order\n2 - Consult all orders"))
