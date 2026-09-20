@@ -71,6 +71,7 @@ def ToConsultOrder(cursor):
     
 # It checks the products
 def ToConsultProducts(cursor, connecting):
+    j = 0
     while True:
         try:
             category_product = input("What is the category of product?\n> ")
@@ -78,8 +79,19 @@ def ToConsultProducts(cursor, connecting):
         except:
             print("Incorrect value. Please, try again.")
         else:
-            print(cursor.fetchall())
+            products = cursor.fetchall()
+            size = len(products)
+            print(size)
+            while True:
+                print(j)
+                print(products[j][0:3])
+                if j == size:
+                    break
+                else:
+                    j += 1
+                print(j)
             break
+            
     ToTime()
     
 # It registers a product
