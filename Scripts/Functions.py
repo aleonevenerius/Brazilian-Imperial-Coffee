@@ -83,15 +83,12 @@ def ToConsultProducts(cursor, connecting):
             size = len(products)
             print(size)
             while True:
-                print(j)
-                print(products[j][0:3])
-                if j == size:
+                if j == (size-1):
                     break
                 else:
+                    print(products[j][0:3])
                     j += 1
-                print(j)
             break
-            
     ToTime()
     
 # It registers a product
