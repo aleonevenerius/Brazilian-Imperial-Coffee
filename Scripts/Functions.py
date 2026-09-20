@@ -1,5 +1,5 @@
 import time
-'''
+
 #                           The main function of the system
 # It creates the system's logo
 def ToLogo():
@@ -151,8 +151,8 @@ def ToChoose(cursor, connecting):
 '''
 def Test(cursor, connecting):
     cursor.execute("SELECT * FROM db_order")    
-    testing = cursor.fetchall()
-    print("AAAAAAAAAAA\n\n\n")
-    print(testing)
-    
-#Test(cursor, connecting)
+    db = cursor.fetchall()
+    print(type(db)) # list
+    print(len(db)) # 15 tuples into one list
+    print(db[0][0:4]) 
+'''
