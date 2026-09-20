@@ -161,11 +161,3 @@ def ToChoose(cursor, connecting):
                     ToDeleteOrder(cursor, connecting)
                 case 7:
                     break
-'''
-def Test(cursor, connecting):
-    cursor.execute("SELECT * FROM db_order")    
-    db = cursor.fetchall()
-    print(type(db)) # list
-    print(len(db)) # 15 tuples into one list
-    print(db[0][0:4]) 
-'''
