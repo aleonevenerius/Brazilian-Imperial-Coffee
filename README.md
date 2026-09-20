@@ -3,6 +3,8 @@
 
 A simple café system.
 
+![System-image](https://github.com/aleonevenerius/Brazilian-Imperial-Coffee/blob/master/Images/System-Image.png)
+
 ## ❓What is its purpose?
 
 Its main purpose is to practise my SQL skills.
