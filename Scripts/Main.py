@@ -16,8 +16,10 @@ except:
 
 else:
     cursor = connecting.cursor()
-    
+    Functions.Test(cursor, connecting)
+    '''
     # Calling functions from library Functions
     Functions.ToLogo()
     Functions.ToOptions()
     Functions.ToChoose(cursor, connecting)
+    '''

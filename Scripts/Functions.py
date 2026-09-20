@@ -1,5 +1,5 @@
 import time
-"""
+'''
 #                           The main function of the system
 # It creates the system's logo
 def ToLogo():
@@ -148,4 +148,8 @@ def ToChoose(cursor, connecting):
                     ToDeleteOrder(cursor, connecting)
                 case 7:
                     break
-"""
+'''
+def Test(cursor, connecting):
+    cursor.execute("SELECT * FROM db_products")
+    print(cursor.fetchall())
+#est(cursor, connecting)
