@@ -1,5 +1,5 @@
 import time
-
+"""
 #                           The main function of the system
 # It creates the system's logo
 def ToLogo():
@@ -148,3 +148,4 @@ def ToChoose(cursor, connecting):
                     ToDeleteOrder(cursor, connecting)
                 case 7:
                     break
+"""
