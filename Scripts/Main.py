@@ -4,8 +4,6 @@ import Functions
 
 # The password to acess the PostgreSQL
 password = input("Password: ")
-# The main variable which will control the main loop
-labour = True
 
 # The First Steps
 try:
