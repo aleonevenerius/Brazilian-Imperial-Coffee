@@ -63,12 +63,34 @@ def ToChangeCircumstances(cursor, connecting):
     ToTime()
     
 # It consults the orders
-def ToConsultOrder(cursor):
-    number_order = input("What's the number of order?\n> ")
-    cursor.execute('SELECT * FROM db_order WHERE code_order = '+ number_order)
-    print(cursor.fetchall())
-    ToTime()
-    
+def ToConsultOrder(cursor, connecting):
+    def OneOrder(cursor, connecting):
+        number_order = input("What's the number of order?\n> ")
+        cursor.execute('SELECT * FROM db_order WHERE code_order = '+ number_order)
+        order = cursor.fetchall())
+        if order == []:
+            print("There is no that order.")
+        else:
+            print(order[3])
+        ToTime()
+        
+    def AllOrders():
+        
+        
+    while True:
+        try:
+            type_order = int(input("What do you wish?\n1 - Consult solely one order\n2 - Consult all orders"))
+        except ValueError:
+            print("There is no this option. Please, try again.")
+        else:
+            if 1 == type_order:
+                OneOrder(cursor, connecting)
+            elif 2 == type_order:
+                AllOrders()
+            else:
+                print("There is no this option. Please, try again.")
+                break
+
 # It checks the products
 def ToConsultProducts(cursor, connecting):
     j = 0

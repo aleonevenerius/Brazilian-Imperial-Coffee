@@ -28,4 +28,4 @@ Its main purpose is to practise my SQL skills.
 * The functions delete order and change cirumstances created.
 
 ### Sunday, September 20, 2026:
-* the Reading of  products data base is cleaner than before.
+* The reading of products data base is cleaner than before.
