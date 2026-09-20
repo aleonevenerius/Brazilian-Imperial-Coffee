@@ -81,15 +81,19 @@ def ToConsultProducts(cursor, connecting):
         else:
             products = cursor.fetchall()
             size = len(products)
-            print(size)
             while True:
                 if j == (size-1):
                     break
                 else:
-                    print(products[j][0:3])
-                    j += 1
+                    try:
+                        print(products[j][0:3])
+                    except:
+                        print("Error!")
+                        j = size-1
+                    else:
+                        j += 1
             break
-    ToTime()
+
     
 # It registers a product
 def ToRegisterProduct(cursor, connecting):
