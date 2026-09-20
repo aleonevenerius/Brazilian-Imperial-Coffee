@@ -1,5 +1,9 @@
 import time
 
+#                           The main message
+error_menssage = "There is an error. Please, try again"
+incorrect_value = "Incorrect value. Please, try again."
+ok = "Done!"
 #                           The main function of the system
 # It creates the system's logo
 def ToLogo():
@@ -12,14 +16,7 @@ def ToOptions():
     print(o.read())
 
 def ToTime():
-    icons = ["|", "/", "-", "\\", "|"]
-    i = 0
-    while i < 5:
-        print(f"\rLoading {icons[i%len(icons)]}", end="", flush=True)
-        i += 1
-        time.sleep(0.1)
-
-    print("\nDone!")
+    print("Done!")
     time.sleep(1)
     
 # It create order
@@ -28,27 +25,31 @@ def ToCreateOrder(cursor, connecting):
         try:
             # Variables about client and order
             order = int(input("What is your order?: "))
-        except ValueError:
-            print("The order must be an int number!")
+        except:
+            print(error_menssage)
         else:
+            str(order)
             client_name = input("What is your name?:")
-            cursor.execute(
-            """
-            INSERT INTO db_order(order_circumstance, client_name, client_order)
-            VALUES(%s, %s, %s)
-            """,
-            ('Making', client_name, order))
-            connecting.commit()
-            break
+            try:
+                cursor.execute(
+                """
+                INSERT INTO db_order(order_circumstance, client_name, client_order)
+                VALUES(%s, %s, %s)
+                """,('Making', client_name, order))
+            except:
+                print(error_menssage)
+            else:
+                connecting.commit()
+                break
     ToTime()
     
 # It changes the cirumstances of order
 def ToChangeCircumstances(cursor, connecting):
     while True:
         try:
-            client_order_code = int(input('Order code: '))
+            client_order_code = input('Order code: ')
         except ValueError:
-            print("Incorrect value. Please, try again.")
+            print(incorrect_value)
         else:
             client_order_code = str(client_order_code)
             cursor.execute(
@@ -109,7 +110,7 @@ def ToConsultProducts(cursor, connecting):
             category_product = input("What is the category of product?\n> ")
             cursor.execute("SELECT * FROM db_products WHERE category = '"+category_product+"'")
         except:
-            print("Incorrect value. Please, try again.")
+            print(incorrect_value)
         else:
             products = cursor.fetchall()
             size = len(products)
@@ -135,7 +136,7 @@ def ToRegisterProduct(cursor, connecting):
         try:
             price_product = float(input("What is the price of its?: "))
         except ValueError:
-            print("This value isn't acceptable.")
+            print(incorrect_value)
         else:
             cursor.execute(
             """
@@ -143,7 +144,7 @@ def ToRegisterProduct(cursor, connecting):
             VALUES(%s, %s, %s)
             """, (name_product, category_product, price_product))
             connecting.commit()
-            print("It was created properly!")
+            print(ok)
             break
     ToTime()
     
@@ -161,7 +162,7 @@ def ToDeleteOrder(cursor, connecting):
             WHERE code_order = %s;
             """, (code_order_client))
             connecting.commit()
-            print("Done!")
+            print(ok)
             break
     ToTime()
 
@@ -171,7 +172,7 @@ def ToChoose(cursor, connecting):
         try:
             choose = int(input("Which shall we select?\n> "))
         except ValueError:
-            print("Incorrect value! Please, try again.")
+            print(incorrect_value)
         else:
             match choose:
                 case 1:
