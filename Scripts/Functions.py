@@ -151,5 +151,8 @@ def ToChoose(cursor, connecting):
 '''
 def Test(cursor, connecting):
     cursor.execute("SELECT * FROM db_products")
+    f = "C:\\DB\\Cafe\\Scripts\\Test.txt"
+    with open(f, "w") as file:
+        
     print(cursor.fetchall())
-#est(cursor, connecting)
+   
