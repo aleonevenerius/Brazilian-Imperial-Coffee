@@ -23,6 +23,9 @@ Its main purpose is to practise my SQL skills.
 ### Monday, September 7, 2026:
 * The scripts' structure is complete.
 
-### Sunday, September, 2026:
+### Sunday, September 12, 2026:
 * SQL's data type changed INTEGER to SMALLINT
 * The functions delete order and change cirumstances created.
+
+### Sunday, September 20, 2026:
+* the Reading of  products data base is cleaner than before.
