@@ -47,19 +47,35 @@ def ToCreateOrder(cursor, connecting):
 def ToChangeCircumstances(cursor, connecting):
     while True:
         try:
-            client_order_code = input('Order code: ')
+            client_order_code = int(input('Order code: '))
         except ValueError:
             print(incorrect_value)
         else:
-            client_order_code = str(client_order_code)
-            cursor.execute(
-            """
-            UPDATE db_order
-            SET order_circumstance = 'Done'
-            WHERE code_order = %s
-            """, (client_order_code,))
-            connecting.commit()
-            print("Done!")
+            # Inspecting if there is that client code order
+            cursor.execute("SELECT * FROM db_order")
+            db = cursor.fetchall()
+            size = len(db)
+            print("Tamaho: "+size)
+            j = 0
+            while True:
+                if (db[j][0]) == client_order_code:
+                    str(client_order_code) # Converting int to str
+                    cursor.execute(
+                    """
+                    UPDATE db_order
+                    SET order_circumstance = 'Done'
+                    WHERE code_order = %s
+                    """, (client_order_code,))
+                    connecting.commit() 
+                    print("OK")
+                    break
+                elif (db[j][0]) > client_order_code:
+                    print("Bazinga")
+                    break
+                else:
+                    print("J: "+j)
+                    print(db[j][0])
+                    j += 1
             break
     ToTime()
     
