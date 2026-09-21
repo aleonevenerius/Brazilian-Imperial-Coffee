@@ -1,0 +1,5 @@
+CREATE TABLE db_users(
+	code_user SERIAL PRIMARY KEY,
+	name_user VARCHAR(50) NOT NULL,
+	password_user VARCHAR(10) NOT NULL
+);
